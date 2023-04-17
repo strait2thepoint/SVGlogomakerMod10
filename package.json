@@ -1,0 +1,38 @@
+{
+  "name": "svglogomakermod10",
+  "version": "1.0.0",
+  "description": "SVG Logo Maker based on user input",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strait2thepoint/SVGlogomakerMod10.git"
+  },
+  "keywords": [
+    "SVG",
+    "Logo",
+    "Maker",
+    "developer",
+    "web",
+    "dev",
+    "git",
+    "github",
+    "node.js"
+  ],
+  "author": "Laura Strait, Strait2thePoint",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/strait2thepoint/SVGlogomakerMod10/issues"
+  },
+  "homepage": "https://github.com/strait2thepoint/SVGlogomakerMod10#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^9.1.5",
+    "svg": "^0.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
