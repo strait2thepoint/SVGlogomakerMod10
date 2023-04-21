@@ -27,7 +27,7 @@ To be able to generate an SVG logo for any project
 Type "node -v" in your command line to check for Node.js installation on your computer. If node is not present, please refer to Node.js website. Next, using codespace or VSC, clone the repository to your computer. Use the command "npm install" on the CLI while in the SVGLOGOMAKERMOD10 folder to install npm dependencies. The command "npm install --save-dev jest" will install Jest as a devDependency.
 
 ## Usage
-CD into the SVGLOGOMAKERMOD10 folder. Type "npm start" or "node index.js"in the CLI to launch the application. Answer the series of questions. If you do not enter a valid color that matches the color list provided in the color.js file, you will be prompted to try again. You can only enter 3 characters.  If you enter more, you will be prompted to try again. Once all the questions have been appropriately answered, your SVG logo will be generated under the file name 'shape.svg'. Right click on the file and open in your browser.  See video for example.
+CD into the SVGLOGOMAKERMOD10 folder. Type "node index.js"in the CLI to launch the application. Answer the series of questions. If you do not enter a valid color that matches the color list provided in the color.js file, you will be prompted to try again. You can only enter 3 characters.  If you enter more, you will be prompted to try again. Once all the questions have been appropriately answered, your SVG logo will be generated under the file name 'shape.svg'. Right click on the file and open in your browser.  See video for example.
 
 ## License
 MIT License
