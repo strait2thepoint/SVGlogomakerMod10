@@ -1,8 +1,8 @@
-const Circle = require('./circle.js');
-const Square = require('./square.js');
-const Triangle = require('./triangle.js');
-const Ellipse = require('./ellipse.js');
-const Rectangle = require('./rectangle.js');
+const Circle = require('../lib/Circle.js');
+const Square = require('../lib/Square.js');
+const Triangle = require('../lib/Triangle.js');
+const Ellipse = require('./lib/Ellipse.js');
+const Rectangle = require('../lib/Rectangle.js');
 
 //this is checking to see if the input matches one of our available shapes and then exports it
 const myShape = ((response)=>{
