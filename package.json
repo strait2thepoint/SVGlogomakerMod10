@@ -29,7 +29,7 @@
   "homepage": "https://github.com/strait2thepoint/SVGlogomakerMod10#readme",
   "dependencies": {
     "fs": "^0.0.1-security",
-    "inquirer": "^9.1.5",
+    "inquirer": "^8.0.0",
     "svg": "^0.1.0"
   },
   "devDependencies": {

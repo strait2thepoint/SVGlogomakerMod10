@@ -147,7 +147,6 @@ const colors = [
 'yellow',
 'yellowgreen'
 ]
-console.log(colors.length);
 module.exports = colors;
 
 //colors obtained by searching "list of 150 hexidecimal key words" on ChatGPT

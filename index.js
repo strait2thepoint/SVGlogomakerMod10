@@ -1,34 +1,52 @@
 const fs = require('fs');
-// const SVG = require('svg.js');
+const inquirer = require('inquirer');
 const questions = require('./assets/questions.js');
-const myShape = require('./assets/myShape.js');
-const fileName = './new/logo.svg';
-const inquirer = import('inquirer');
-
-import('inquirer')
-.then((inquirer) =>{
-console.log(inquirer)
-})
-.catch((error)=>{
-console.log('error')
-});
+const { Circle, Rectangle, Square, Triangle, Ellipse } = require("./lib/index")
+// const SVG = require('svg.js');
+// const myShape = require('./assets/myShape.js');
+// const fileName = './new/logo.svg';
 
 //create new svg file via inquirer & fs
-const makeLogo = ((response)=>{
-const svg = myShape(response);
-fs.writeFile(fileName, svg, ()=> console.log('Generated logo.svg'));
-});
+const makeLogo = (shape) => {
+    fs.writeFile("shape.svg", shape.renderSVG(), (err) => err
+        ? console.log(err)
+        : console.log('Generated logo.svg'));
+}
 
 //init, questions -->logo via input, catch errors
 function init() {
-inquirer 
-.prompt(questions)
-.then((response) => {
-createLogo(response);
-})
-.catch(err => {
-console.log(err)
-});
+    inquirer
+        .prompt(questions)
+        .then((response) => {
+            console.log(response)
+            let selectedShape;
+            switch (response.shapeSelection) {
+                case "square":
+                    selectedShape = new Square(response.shapeColor, response.text, response.textColor)
+                    break;
+                case "circle":
+                    selectedShape = new Circle(response.shapeColor, response.text, response.textColor)
+                    break;
+                case "rectangle":
+                    selectedShape = new Rectangle(response.shapeColor, response.text, response.textColor)
+                    break;
+                case "ellipse":
+                    selectedShape = new Ellipse(response.shapeColor, response.text, response.textColor)
+                    break;
+                case "triangle":
+                    selectedShape = new Triangle(response.shapeColor, response.text, response.textColor)
+                    break;
+
+                default:
+                    console.log("loo")
+                    break;
+            }
+            makeLogo(selectedShape)
+
+        })
+        .catch(err => {
+            console.log(err)
+        });
 }
 
 init();
